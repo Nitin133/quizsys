@@ -1,0 +1,89 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+  }
+  #container{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    background-image: url(static/images/Hero-image-background-new-services.png);
+    height: 100%;
+    width: 100%;
+  }
+  #regs{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    
+    }  
+h1{
+  font-style: 45px;
+  line-height: 70px;
+  color:#fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+form{
+  width: 50%;
+  height: auto;
+  border: 1px solid #fff;
+  margin: 30px auto;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, .6);
+}
+.box{
+  margin-bottom: 25px;
+
+}
+
+.reg{
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  padding-left: 15px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: .5px;
+
+}
+label{
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  bottom: 30px;
+}
+.reg:focus ~ label,
+.reg:valid ~ label{
+  transition: .3s;
+
+  bottom: 55px;
+  font-size: 14px;
+  color: #124abd;
+}
+.reg:focus,.reg:valid{
+  border-bottom:  2px solid #124abd;
+}
+input[type=submit]{
+  margin: 25px 0;
+  width: 100%;
+  height: 40px;
+  background-color: #124abd;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+input[type=submit]:hover{
+  background-color: transparent;
+  border: 1px;
+  transition: .3s;
+}

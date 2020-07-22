@@ -1,0 +1,161 @@
+<html>
+    <head>
+      
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/quiz1.css' %}"  />
+    
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+        <style>
+            .quiz-box .question-number,
+            .quiz-box .question-text,
+            .quiz-box .option-container,
+            .quiz-box .answers-indicator{
+                width: 100%;
+                float: left;
+
+            }
+
+            .quiz-box .question-number{
+                font-size: 18px;
+                color: #009688;
+                font-weight: 600;
+                border-bottom: 1px solid #cccccc;
+                
+                border-radius: 2px ;
+                padding-bottom: 10px;
+                line-height: 35px;
+            }
+            .quiz-box .question-text{
+                font-size: 22px;
+                color: #000000;
+                line-height: 28px;
+                font-weight: 400;
+                padding: 20px 0;
+                margin: 0;
+            }
+            
+            .quiz-box .option-container .option{
+                background-color: #cccccc;
+                padding: 13px 15px;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                text-transform: capitalize;
+                animation: fadeIn 0,3s ease forwards;
+            }
+            @keyframes fadeIn{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+           .quiz-box .btn{
+               margin: 15px 0;
+           }
+           .quiz-box .answers-indicator{
+               border-top: 1px solid #cccccc;
+           }
+           .quiz-box .answers-indicator div{
+               height: 40px;
+               width: 40px;
+               display: inline-block;
+               background-color: #cccccc;
+               border-radius: 50%;
+               margin-right: 3px;
+               margin-top: 15px;
+
+           }
+
+
+        </style>
+    
+    </head>
+    <body style="background-color: #009688;  margin: 0;font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400;">
+        <script>
+            function getans(){
+                document.getElementById(UserAnswers).innerHTML="";
+                var e=document.getElementsByName("input");
+                for(i=0;i<=e.length;i++)
+                {
+                    if (e[i].type=="radio")
+                    {
+                        if (e[i].checked)
+                        {
+                            document.getElementById(UserAnswers).innerHTML+="q";
+
+
+
+                        }
+                    }
+                }
+            }
+
+          
+        </script>
+        
+
+       
+        {%  for row in out %}
+        <div class="quiz-box custom-box  ">
+            <div class="question-number">
+                Question {{row.id}} of 5
+
+
+            </div>
+
+
+
+            <div class="question-text" >
+                {{row.id}} {{row.question}}
+
+
+            </div>
+            <div class="option-container">
+                <div class="option"> <input type="radio" name="{{row.id}}" id="option1 " value="{{row.option1}}"> {{row.option1}}</div>
+                <div class="option"> <input type="radio" name="{{row.id}}" id="option2 " value="{{row.option2}}"> {{row.option2}}</div>
+                <div class="option"> <input type="radio"  name="{{row.id}}" id="option3 " value="{{row.option3}}"> {{row.option3}}</div>
+                <div class="option"> <input type="radio" name="{{row.id}}" id="option4 " value="{{row.option4}}"> {{row.option4}}</div>
+
+
+            </div>
+            <div class="next-question-btn">
+                <button type="button" class="btn"><a href="href="http://127.0.0.1:8000/backques?id={{row.id}}">Back</a></button>
+                <button type="button" class="btn"><a href="href="http://127.0.0.1:8000/nextques?id={{row.id}}">Next</a></button>
+                
+
+
+            </div>
+            <div class="answers-indicator">
+                <div> </div>
+                <div></div>       
+                <div></div>
+                <div></div>
+                <div></div>
+                
+
+
+
+            </div>
+            
+
+
+
+        {% endfor %}
+        </div>
+        
+       
+
+
+        <!------------------------------------------------>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/quiz1.css' %}"  />
+    
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <style>
+            .quiz-box .question-number,
+            .quiz-box .question-text,
+            .quiz-box .option-container,
+            .quiz-box .answers-indicator{
+                width: 100%;
+                float: left;
+
+            }
+
+            .quiz-box .question-number{
+                font-size: 18px;
+                color: #009688;
+                font-weight: 600;
+                border-bottom: 1px solid #cccccc;
+                
+                border-radius: 2px ;
+                padding-bottom: 10px;
+                line-height: 35px;
+            }
+            .quiz-box .question-text{
+                font-size: 22px;
+                color: #000000;
+                line-height: 28px;
+                font-weight: 400;
+                padding: 20px 0;
+                margin: 0;
+            }
+            
+            .quiz-box .option-container .option{
+                background-color: #cccccc;
+                padding: 13px 15px;
+                font-size: 16px;
+                line-height: 22px;
+                color: #000000;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                text-transform: capitalize;
+                animation: fadeIn 0,3s ease forwards;
+            }
+            @keyframes fadeIn{
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+           .quiz-box .btn{
+               margin: 15px 0;
+           }
+           .quiz-box .answers-indicator{
+               border-top: 1px solid #cccccc;
+           }
+           .quiz-box .answers-indicator div{
+               height: 40px;
+               width: 40px;
+               display: inline-block;
+               background-color: #cccccc;
+               border-radius: 50%;
+               margin-right: 3px;
+               margin-top: 15px;
+
+           }
+
+
+        </style>
+
+    </head>
+    <body style="background-color: #009688;  margin: 0;font-size: 16px;font-family: 'Montserrat', sans-serif; font-weight: 400;">
+        <script>
+            
+
+          
+        </script>
+        <div class="home-box custom-box " >
+            <h3>Instruction :</h3>
+            <p>Total number of questions : <span class="total-question">15</span></p>
+            <button type="button " class="btn">Start Quiz</button>
+
+        </div>
+        
+            
+    </body>
+
+</html>

@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  
+}
+#container{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .5);
+  background-blend-mode: multiply;
+}
+
+#signup{
+  width: 0%;
+  height: 100%;
+  float: right;
+  overflow-y: scroll;
+
+
+}
+#login{
+width: 100%;
+height: 100%;
+overflow-y: scroll;
+
+}
+h1{
+  font-style: 45px;
+  line-height: 70px;
+  color:#fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+form{
+  width: 50%;
+  height: auto;
+  border: 1px solid #fff;
+  margin: 30px auto;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, .6);
+}
+.box{
+  margin-bottom: 25px;
+
+}
+.reg{
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  padding-left: 15px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: .5px;
+
+}
+label{
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  bottom: 30px;
+}
+.reg:focus ~ label,
+.reg:valid ~ label{
+  transition: .3s;
+
+  bottom: 55px;
+  font-size: 14px;
+  color: #124abd;
+}
+.reg:focus,.reg:valid{
+  border-bottom:  2px solid #124abd;
+}
+input[type=checkbox]:before{
+  content: "";
+  position: relative;
+  width: 1em;
+  height: 1em;
+  background-color: #000;
+  display: flex;
+}
+input[type=checkbox]:after{
+  content: "";
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: solid #124abd;
+  display: flex;
+  bottom: 100%;
+}
+input[type=checkbox]:checked:after{
+  transition: .3s;
+  transform: rotate(-45deg);
+  border: 2px solid #124abd;
+  border-top: 0;
+  border-right: 0;
+  height: .5em;
+
+
+}
+span{
+  font-size: 16px;
+  color: #124abd;
+  letter-spacing: 1.5px;
+  margin-left: 15px;
+
+
+}
+input[type=submit]{
+  margin: 25px 0;
+  width: 100%;
+  height: 40px;
+  background-color: #124abd;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+input[type=submit]:hover{
+  background-color: transparent;
+  border: 1px;
+  transition: .3s;
+}

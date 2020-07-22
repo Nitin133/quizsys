@@ -1,0 +1,117 @@
+<html>
+    <head>
+        
+      
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles/style1.css' %}"  />
+    
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    
+
+    </head>
+
+
+    <body>
+        <script>
+            function signup(){
+                var login=document.querySelector('#login')
+                var signup=document.querySelector('#signup')
+                login.style.width='0';
+                login.style.display='none';
+                login.style.transition='.3s';
+                signup.style.width='100%';
+                signup.style.transition='.3s';
+            }
+            function logi(){
+                var login=document.querySelector('#login')
+                var signup=document.querySelector('#signup')
+                login.style.width='100%';
+                login.style.display='block';
+                login.style.transition='.3s';
+                signup.style.width='0%';
+                signup.style.transition='.3s';
+
+            }
+        </script>
+        <div id="container" >
+            <div id="signup">
+                <h1 style="color: aliceblue;">SignUp</h1>
+                <form >
+                    <div class="box">
+                        <input type="text" name="" required="" class="reg" ">
+                        <label  > First Name :</label>
+
+                    </div>
+                    <div class="box">
+                        <input type="text" name="" required="" class="reg">
+                        <label > Last Name :</label>
+
+                    </div>
+                    <div class="box">
+                        <input type="email" name="" required="" class="reg">
+                        <label > Email :</label>
+
+                    </div>
+                    <div class="box">
+                        <input type="password" name="" required="" class="reg">
+                        <label > Password :</label>
+
+                    </div>
+                    <div class="box">
+                        <input type="password" name="" required="" class="reg">
+                        <label >  Re-enter Password :</label>
+
+                    </div>
+                    <input type="checkbox" name=""> <span>I agree terms and conditions</span><br/>
+                    <input type="submit" name="" value="signup"> <br/>
+                    <input type="submit" name="" value="Already have an account" onclick="logi();">
+                </form>
+
+            </div>
+            <div id="login">
+                <h1 style="color: aliceblue;">Login</h1>
+                <form >
+                    <div class="box">
+                        <input type="email" name="" required="" class="reg">
+                        <label >Email Id</label>
+
+                    </div>
+                    <div class="box">
+                        <input type="password" name="" required="" class="reg">
+                        <label >Password</label>
+
+                    </div>
+                    <input type="checkbox" name="" ><span >remember me</span> <br/>
+                    <input type="submit"  name="" value="login"> <br/>
+                    <input type="submit" name="" value="create account" onclick="signup();">
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+              
+            
+
+       
+
+    
+
+
+
+        
+
+    </body>
+
+
+    
+
+    
+
+</html>
